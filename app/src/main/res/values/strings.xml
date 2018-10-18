@@ -3,4 +3,11 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pokemon_dummy_name">Bulbasaur</string>
+    <string name="dummy_pokemon_name">Pikachu</string>
+    <string name="dummy_pokemon_height">Height</string>
+    <string name="dummy_pokemon_weight">Weight</string>
+    <string name="dummy_pokemon_type">Type</string>
+    <string name="dummy_pokemon_weakness">Weakness</string>
+    <string name="dummy_pokemon_evolution">Prev Evolution</string>
+    <string name="dummy_pokemon_next_evolution">Next Evolution</string>
 </resources>

@@ -2,7 +2,8 @@
 <resources>
     <dimen name="spacing">4dp</dimen>
     <dimen name="padding_vertical">16dp</dimen>
-    <dimen name="image_size">150dp</dimen>
+    <dimen name="image_thumb_size">120dp</dimen>
+    <dimen name="image_detail_size">150dp</dimen>
     <dimen name="textview_size">16sp</dimen>
     <dimen name="cardview_radius">8dp</dimen>
 </resources>
