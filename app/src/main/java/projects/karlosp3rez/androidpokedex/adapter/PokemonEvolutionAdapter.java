@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.robertlevonyan.views.chip.Chip;
 import com.robertlevonyan.views.chip.OnChipClickListener;
@@ -23,8 +22,8 @@ import projects.karlosp3rez.androidpokedex.utils.Common;
 
 public class PokemonEvolutionAdapter extends RecyclerView.Adapter<PokemonEvolutionAdapter.EvolutionViewHolder> {
 
-    Context context;
-    List<Evolution> evolutions;
+    private Context context;
+    private List<Evolution> evolutions;
 
     public PokemonEvolutionAdapter(Context context, List<Evolution> evolutions) {
         this.context = context;
@@ -50,7 +49,6 @@ public class PokemonEvolutionAdapter extends RecyclerView.Adapter<PokemonEvoluti
         evolutionViewHolder.setItemClickListener(new IItemClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(context, "Click to evolve Pokemon", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -60,18 +58,18 @@ public class PokemonEvolutionAdapter extends RecyclerView.Adapter<PokemonEvoluti
         return evolutions.size();
     }
 
-    public class EvolutionViewHolder extends RecyclerView.ViewHolder {
+    class EvolutionViewHolder extends RecyclerView.ViewHolder {
         Chip chip;
         IItemClickListener itemClickListener;
 
-        public void setItemClickListener(IItemClickListener itemClickListener) {
+        void setItemClickListener(IItemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
         }
 
-        public EvolutionViewHolder(@NonNull View itemView) {
+        EvolutionViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            chip = (Chip) itemView.findViewById(R.id.chipView);
+            chip = itemView.findViewById(R.id.chipView);
 
             chip.setOnChipClickListener(new OnChipClickListener() {
                 @Override

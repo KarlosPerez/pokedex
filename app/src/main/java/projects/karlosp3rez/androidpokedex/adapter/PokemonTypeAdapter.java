@@ -18,8 +18,8 @@ import projects.karlosp3rez.androidpokedex.utils.Common;
 
 public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.TypeViewHolder> {
 
-    Context context;
-    List<String> typeList;
+    private Context context;
+    private List<String> typeList;
 
     public PokemonTypeAdapter(Context context, List<String> typeList) {
         this.context = context;
@@ -50,18 +50,18 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
         return typeList.size();
     }
 
-    public class TypeViewHolder extends RecyclerView.ViewHolder {
+    class TypeViewHolder extends RecyclerView.ViewHolder {
         Chip chip;
         IItemClickListener itemClickListener;
 
-        public void setItemClickListener(IItemClickListener itemClickListener) {
+        void setItemClickListener(IItemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
         }
 
-        public TypeViewHolder(@NonNull View itemView) {
+        TypeViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            chip = (Chip) itemView.findViewById(R.id.chipView);
+            chip = itemView.findViewById(R.id.chipView);
 
             chip.setOnChipClickListener(new OnChipClickListener() {
                 @Override

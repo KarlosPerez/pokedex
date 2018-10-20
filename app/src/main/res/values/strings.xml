@@ -10,4 +10,5 @@
     <string name="dummy_pokemon_weakness">Weakness</string>
     <string name="dummy_pokemon_evolution">Prev Evolution</string>
     <string name="dummy_pokemon_next_evolution">Next Evolution</string>
+    <string name="poke_image_content_description">Pokemon Image</string>
 </resources>

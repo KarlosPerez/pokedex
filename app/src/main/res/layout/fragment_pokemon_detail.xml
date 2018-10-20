@@ -119,7 +119,8 @@
             android:layout_alignTop="@+id/card_view"
             android:layout_marginTop="-50dp"
             android:layout_width="@dimen/image_detail_size"
-            android:layout_height="@dimen/image_detail_size" />
+            android:layout_height="@dimen/image_detail_size"
+            android:contentDescription="@string/poke_image_content_description" />
 
     </RelativeLayout>
 

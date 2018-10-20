@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     BroadcastReceiver showEvolution = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if(intent.getAction().toString().equals(Common.KEY_NUM_EVOLUTION)) {
+            if(intent.getAction().equals(Common.KEY_NUM_EVOLUTION)) {
 
                 //replace fragment
                 Fragment detailFragment = PokemonDetail.getInstance();
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("POKEMON LIST");
         setSupportActionBar(toolbar);
 
