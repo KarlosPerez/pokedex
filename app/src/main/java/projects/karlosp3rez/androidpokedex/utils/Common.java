@@ -10,6 +10,7 @@ import projects.karlosp3rez.androidpokedex.model.Pokemon;
 public class Common {
     public static final String BASE_URL = "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/";
     public static final String KEY_ENABLE_HOME = "enable_home";
+    public static final String KEY_NUM_EVOLUTION = "num_evolution";
 
     public static List<Pokemon> pokemonList =  new ArrayList<>();
 
@@ -51,5 +52,13 @@ public class Common {
             default:
                 return Color.parseColor("#658FA0");
         }
+    }
+
+    public static Pokemon findPokemonByNum(String num) {
+        for(Pokemon pokemon:Common.pokemonList) {
+            if(pokemon.getNum().equals(num))
+                return pokemon;
+        }
+        return null;
     }
 }

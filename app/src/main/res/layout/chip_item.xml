@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/cardview_radius"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
     <com.robertlevonyan.views.chip.Chip
@@ -13,7 +13,6 @@
         app:mcv_chipText="@string/dummy_pokemon_name"
         app:mcv_backgroundColor="@color/colorPrimary"
         app:mcv_textColor="@android:color/white">
-
 
     </com.robertlevonyan.views.chip.Chip>
 

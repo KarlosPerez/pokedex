@@ -1,13 +1,13 @@
 package projects.karlosp3rez.androidpokedex.model;
 
-public class NextEvolution {
+public class Evolution {
     private String num;
     private String name;
 
-    public NextEvolution() {
+    public Evolution() {
     }
 
-    public NextEvolution(String num, String name) {
+    public Evolution(String num, String name) {
         this.num = num;
         this.name = name;
     }

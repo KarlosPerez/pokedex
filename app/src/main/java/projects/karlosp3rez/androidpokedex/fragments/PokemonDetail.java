@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import projects.karlosp3rez.androidpokedex.R;
+import projects.karlosp3rez.androidpokedex.adapter.PokemonEvolutionAdapter;
 import projects.karlosp3rez.androidpokedex.adapter.PokemonTypeAdapter;
 import projects.karlosp3rez.androidpokedex.model.Pokemon;
 import projects.karlosp3rez.androidpokedex.utils.Common;
@@ -41,15 +42,14 @@ public class PokemonDetail extends Fragment {
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        Pokemon pokemon;
         View itemView = inflater.inflate(R.layout.fragment_pokemon_detail, container, false);
 
-        Pokemon pokemon;
         //Get position from Argument
         if (getArguments().get("num") == null) {
             pokemon = Common.pokemonList.get(getArguments().getInt("position"));
         }else {
-            pokemon = null;
+            pokemon = Common.findPokemonByNum(getArguments().getString("num"));
         }
         pokemon_img = (ImageView) itemView.findViewById(R.id.pokemon_image);
         pokemon_name = (TextView) itemView.findViewById(R.id.pokeName);
@@ -87,5 +87,16 @@ public class PokemonDetail extends Fragment {
         //Set type
         PokemonTypeAdapter typeAdapter = new PokemonTypeAdapter(getActivity(), pokemon.getType());
         recycler_type.setAdapter(typeAdapter);
+
+        //Set weakness
+        PokemonTypeAdapter weaknessAdapter = new PokemonTypeAdapter(getActivity(), pokemon.getWeaknesses());
+        recycler_weakness.setAdapter(weaknessAdapter);
+
+        //Set Evolution
+        PokemonEvolutionAdapter prevEvoAdapter = new PokemonEvolutionAdapter(getActivity(), pokemon.getPrev_evolution());
+        recycler_prevEvolution.setAdapter(prevEvoAdapter);
+
+        PokemonEvolutionAdapter nextEvoAdapter = new PokemonEvolutionAdapter(getActivity(), pokemon.getNext_evolution());
+        recycler_nextEvolution.setAdapter(nextEvoAdapter);
     }
 }

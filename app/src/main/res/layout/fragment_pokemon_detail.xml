@@ -61,7 +61,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_pokeType"
                     android:layout_marginBottom="10dp"
-                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="40dp"/>
 
                 <TextView
@@ -74,7 +75,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_pokeWeakness"
                     android:layout_marginBottom="10dp"
-                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="40dp"/>
 
                 <TextView
@@ -87,7 +89,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_pokePrevEvolution"
                     android:layout_marginBottom="10dp"
-                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="40dp"/>
 
                 <TextView
@@ -99,7 +102,8 @@
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_pokeNextEvolution"
-                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
                     android:layout_height="40dp"/>
 
 

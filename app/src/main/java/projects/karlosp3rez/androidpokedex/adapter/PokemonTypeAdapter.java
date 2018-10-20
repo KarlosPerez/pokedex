@@ -34,9 +34,15 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TypeViewHolder typeViewHolder, int position) {
+    public void onBindViewHolder(TypeViewHolder typeViewHolder, int position) {
         typeViewHolder.chip.setChipText(typeList.get(position));
         typeViewHolder.chip.changeBackgroundColor(Common.getColorByType(typeList.get(position)));
+        typeViewHolder.setItemClickListener(new IItemClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                //Fix crash
+            }
+        });
     }
 
     @Override
@@ -47,6 +53,10 @@ public class PokemonTypeAdapter extends RecyclerView.Adapter<PokemonTypeAdapter.
     public class TypeViewHolder extends RecyclerView.ViewHolder {
         Chip chip;
         IItemClickListener itemClickListener;
+
+        public void setItemClickListener(IItemClickListener itemClickListener) {
+            this.itemClickListener = itemClickListener;
+        }
 
         public TypeViewHolder(@NonNull View itemView) {
             super(itemView);
