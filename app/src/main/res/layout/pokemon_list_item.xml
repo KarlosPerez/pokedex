@@ -31,7 +31,15 @@
                 android:text="@string/pokemon_dummy_name"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/padding_vertical"
-                android:layout_marginBottom="@dimen/padding_vertical"
+                android:textSize="@dimen/textview_size"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_pokemon_number"
+                android:text="@string/pokemon_dummy_number"
+                android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/textview_size"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"

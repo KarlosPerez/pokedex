@@ -43,6 +43,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
         Glide.with(context).load(pokemonList.get(position).getImg()).into(pokemonViewHolder.pokemon_image);
         //Set Name
         pokemonViewHolder.pokemon_name.setText(pokemonList.get(position).getName());
+        pokemonViewHolder.pokemon_number.setText("#" + pokemonList.get(position).getNum());
 
         //Event
         pokemonViewHolder.setiItemClickListener(new IItemClickListener() {
@@ -64,6 +65,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
         ImageView pokemon_image;
         TextView pokemon_name;
+        TextView pokemon_number;
 
         IItemClickListener iItemClickListener;
 
@@ -76,6 +78,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
             pokemon_image = (ImageView) itemView.findViewById(R.id.pokemon_image);
             pokemon_name = (TextView) itemView.findViewById(R.id.txt_pokemon_name);
+            pokemon_number = (TextView) itemView.findViewById(R.id.txt_pokemon_number);
 
             itemView.setOnClickListener(this);
         }
